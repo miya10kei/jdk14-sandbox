@@ -45,8 +45,11 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <release>14</release> <!-- <release>13</release> -->
-          <compilerArgs>--enable-preview</compilerArgs>
+          <release>14</release>
+          <compilerArgs>
+            <arg>--enable-preview</arg>
+            <arg>-Xlint:preview</arg>
+          </compilerArgs>
         </configuration>
       </plugin>
       <plugin>
