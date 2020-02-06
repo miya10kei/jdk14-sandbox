@@ -13,9 +13,9 @@ public class TextBlocksTest {
     @Test
     void test() {
         var text = """
-                SELECT * FROM TABLE A
+                SELECT\s* FROM TABLE A \
                 WHERE A.id = '1'
                 """;
-        assertThat(text).isEqualTo("SELECT * FROM TABLE A\nWHERE A.id = '1'\n");
+        assertThat(text).isEqualTo("SELECT * FROM TABLE A WHERE A.id = '1'\n");
     }
 }
